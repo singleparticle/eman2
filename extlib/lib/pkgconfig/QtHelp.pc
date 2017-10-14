@@ -1,0 +1,19 @@
+prefix=/build/local
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtHelp
+qt_config=lex yacc warn_on uic resources qt warn_on release incremental link_prl gdb_dwarf_index def_files_disabled exceptions no_mocdepend release stl qt_no_framework release shared dll largefile stl precompile_header mmx 3dnow sse sse2 sse3 ssse3 dylib create_prl link_prl depend_includepath QTDIR_build qt warn_on qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_pc create_libtool explicitlib moc thread shared dll
+moc_location=/build/local/bin/moc
+uic_location=/build/local/bin/uic
+rcc_location=/build/local/bin/rcc
+lupdate_location=/build/local/bin/lupdate
+lrelease_location=/build/local/bin/lrelease
+
+Name: Qthelp
+Description: Qthelp Library
+Version: 4.8.4
+Libs: -L${libdir} -lQtHelp 
+Libs.private: -L/build/local/lib  -lQtSql -L/build/local/lib -lQtGui -L/usr/X11R6/lib64 -lQtNetwork -lQtCore -lpthread -lQtCLucene  
+Cflags: -DQT_SHARED -I/build/local/include -I${includedir}
+Requires: QtNetwork QtSql QtXml
+

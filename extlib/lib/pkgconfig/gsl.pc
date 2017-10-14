@@ -1,0 +1,11 @@
+prefix=/build/local
+exec_prefix=/build/local
+libdir=/build/local/lib
+includedir=/build/local/include
+GSL_CBLAS_LIB=-lgslcblas
+
+Name: GSL
+Description: GNU Scientific Library
+Version: 1.15
+Libs: -L/build/local/lib -lgsl ${GSL_CBLAS_LIB} -lm -lm 
+Cflags: -I/build/local/include
